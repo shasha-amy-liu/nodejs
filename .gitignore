@@ -1,0 +1,25 @@
+**/.DS_Store
+.idea
+.gradle
+.class
+classpath-data.json
+**/*.iml
+**/build/
+**/out/
+**/bin
+
+# for eclipse
+.classpath
+.project
+.settings/
+/target/
+
+# for intellij
+*.iml
+.idea/
+
+# for vscode
+.vscode
+
+# for nodejs
+node_modules

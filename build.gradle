@@ -1,0 +1,46 @@
+plugins {
+  id "com.moowork.node" version "1.2.0"
+}
+
+node {
+    version = '9.8.0'
+    download = true
+}
+
+// install all the 
+task npmDependencyInstall() {
+    dependsOn 'installAxios'
+    dependsOn 'installExpress'
+    dependsOn 'installMocha'
+    dependsOn 'installChai'
+}
+
+task installRequest(type: NpmTask) {
+  // install the express package only
+  args = ['install', 'request', '--save-dev']
+}
+
+task installAxios(type: NpmTask) {
+  // install the express package only
+  args = ['install', 'axios', '--save']
+}
+
+task installExpress(type: NpmTask) {
+  // install the express package only
+  args = ['install', 'express', '--save']
+}
+
+task installMocha(type: NpmTask) {
+  // install the express package only
+  args = ['install', 'mocha', '--save-dev']
+}
+
+task installChai(type: NpmTask) {
+  // install the express package only
+  args = ['install', 'chai', 'should', 'should-http', '--save-dev']  
+}
+
+// run command "npm test"
+task npmTest( type: NpmTask, dependsOn: ['npmInstall', 'npmDependencyInstall'] ) {
+    args = ['test']
+}
