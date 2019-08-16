@@ -1,2 +1,1 @@
-# nodejs
-repo for nodejs "hello world"s
+# Simple Stock App in Node.js
