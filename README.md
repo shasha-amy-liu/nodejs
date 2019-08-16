@@ -13,15 +13,17 @@
 ```
  docker build -t amy/simple-stock .
  docker images
- docker run -p 49160:8080 -d amy/simple-stock
+ docker run -p 49160:9999 -d amy/simple-stock
  docker ps
 ```
-![screen shot](./img/screenshot.jpg)
+![screen shot](./img/screenshot.png)
+
+
+## Init architectual plan
+LoadBalancer -- simple-stock service pool -- [elastic cache for searched results]
 
 ## Reference
-[nodejs best practices](https://github.com/i0natan/nodebestpractices)
-[nodejs package](http://nodesource.com/blog/your-first-nodejs-package/)
-[nodejs unit test](https://buddy.works/guides/how-automate-nodejs-unit-tests-with-mocha-chai)
-[dockerize nodejs app](https://nodejs.org/de/docs/guides/nodejs-docker-webapp/)
-
-## Todo
+1. [nodejs best practices](https://github.com/i0natan/nodebestpractices)
+2. [nodejs package](http://nodesource.com/blog/your-first-nodejs-package/)
+3. [nodejs unit test](https://buddy.works/guides/how-automate-nodejs-unit-tests-with-mocha-chai)
+4. [dockerize nodejs app](https://nodejs.org/de/docs/guides/nodejs-docker-webapp/)
