@@ -27,3 +27,6 @@ LoadBalancer -- simple-stock service pool -- [elastic cache for searched results
 2. [nodejs package](http://nodesource.com/blog/your-first-nodejs-package/)
 3. [nodejs unit test](https://buddy.works/guides/how-automate-nodejs-unit-tests-with-mocha-chai)
 4. [dockerize nodejs app](https://nodejs.org/de/docs/guides/nodejs-docker-webapp/)
+
+## Todo
+1. play with ci/ci provided by github
